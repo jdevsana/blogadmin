@@ -13,6 +13,7 @@ public class User {
     private String username;
     private String email;
     private Address address;
+    private Geo geo;
     private String phone;
     private String website;
     private Company company;
