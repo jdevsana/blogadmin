@@ -31,7 +31,7 @@ public class BlogController {
      */
     @RequestMapping("/users")
     public ResponseEntity<List<User>> getBlogUsers() throws UserNotFoundException {
-        List<User> users = blogService.getAllBlogUsers();
+        List<User> users = blogService.getAllBlogUsers().collectList().block();
         return ResponseEntity.status(HttpStatus.OK).body(users);
     }
 
@@ -42,7 +42,7 @@ public class BlogController {
      */
     @RequestMapping(path = "/posts")
     public ResponseEntity<List<Post>> getBlogPosts() throws PostNotFoundException {
-        List<Post> posts = blogService.getAllBlogPosts();
+        List<Post> posts = blogService.getAllBlogPosts().collectList().block();
         return ResponseEntity.status(HttpStatus.OK).body(posts);
     }
 
