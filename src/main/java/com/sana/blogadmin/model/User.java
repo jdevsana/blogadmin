@@ -12,9 +12,9 @@ public class User {
     private String name;
     private String username;
     private String email;
-    private Address address;
-    private Geo geo;
+    private Address address = new Address();
+    private Geo geo = new Geo();
     private String phone;
     private String website;
-    private Company company;
+    private Company company = new Company();
 }
