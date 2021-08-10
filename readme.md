@@ -15,6 +15,7 @@
 * To get all the posts Mapped to relavent user:
     * http://localhost:8085/api/v1/blog/postbyuser
 
+
 **Dependency:**  Java Version 11 
 
 **Limitations**: First request could be failed after runing the application.  
